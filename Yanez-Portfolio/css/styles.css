@@ -1,0 +1,164 @@
+/* RESET */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* BODY */
+body {
+  background: #0F172B;
+  color: #F1F5F9;
+  min-height: 100vh;
+}
+
+/* HEADER */
+.header {
+  position: sticky;
+  top: 0;
+  background: #111;
+  padding: 14px 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255,255,255,0.08);
+  box-shadow: 0 2px 8px rgba(0,0,0,0.35);
+}
+
+/* TITLE */
+.site-title {
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.4px;
+}
+
+.site-title span {
+  font-weight: 400;
+  opacity: 0.8;
+}
+
+/* HEADER RIGHT */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+/* NAV */
+.nav {
+  display: none;
+}
+
+.nav a {
+  color: #F1F5F9;
+  text-decoration: none;
+  font-size: 0.95rem;
+}
+
+.nav a:hover {
+  text-decoration: underline;
+}
+
+/* NAV ICON */
+.nav-icon {
+  font-size: 1.7rem;
+  cursor: pointer;
+  user-select: none;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.nav-icon:hover {
+  background: rgba(255,255,255,0.08);
+}
+
+/* MOBILE NAV */
+.nav.show {
+  display: block;
+  position: absolute;
+  top: 58px;
+  right: 18px;
+  background: #111;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+  animation: fadeDown 0.2s ease-out;
+}
+
+.nav.show a {
+  display: block;
+  padding: 8px 0;
+}
+
+/* SOCIAL ICONS */
+.social-icons,
+.footer-icons {
+  display: flex;
+  gap: 14px;
+}
+
+.social-icons img,
+.footer-icons img {
+  width: 20px;
+  height: 20px;
+  opacity: 0.85;
+}
+
+.social-icons img:hover,
+.footer-icons img:hover {
+  opacity: 1;
+}
+
+/* MAIN */
+.main {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+/* FOOTER */
+.footer {
+  text-align: center;
+  padding: 20px;
+  background: #111;
+  margin-top: 40px;
+  font-size: 0.85rem;
+}
+
+.footer-icons {
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+/* ANIMATION */
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* DESKTOP */
+@media (min-width: 768px) {
+  .nav {
+    display: flex;
+    gap: 16px;
+  }
+
+  .nav-icon {
+    display: none;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 767px) {
+  .social-icons {
+    display: none;
+  }
+}
